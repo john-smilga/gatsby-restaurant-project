@@ -25,7 +25,7 @@ export default function Footer() {
 }
 
 export const FooterWrapper = styled.footer`
-  padding: 2rem;
+  padding: 1rem;
   background: ${styles.colors.mainGrey};
   color: ${styles.colors.mainWhite};
   text-align: center;
@@ -37,7 +37,7 @@ export const FooterWrapper = styled.footer`
     margin: 0.5rem 0;
   }
   .item {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
   .logo {
     display: inline-block;

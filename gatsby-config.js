@@ -18,7 +18,14 @@ module.exports = {
 
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
-
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.SPACE_ID,
+        // Learn about environment variables: https://gatsby.app/env-vars
+        accessToken: process.env.ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
