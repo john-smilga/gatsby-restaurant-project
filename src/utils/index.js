@@ -2,7 +2,7 @@ import * as styles from './styles'
 import { HomeHeader, PageHeader } from './Header'
 import { Banner } from './Banner'
 import { BannerButton, SectionButton } from './Button'
-import { MainSection } from './Section'
+import { Section } from './Section'
 import { Title } from './Title'
 export {
   styles,
@@ -10,7 +10,7 @@ export {
   Banner,
   BannerButton,
   PageHeader,
-  MainSection,
+  Section,
   Title,
   SectionButton,
 }

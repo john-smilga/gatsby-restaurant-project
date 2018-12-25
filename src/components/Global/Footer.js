@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { styles } from '../../utils'
-import { MainSection } from '../../utils'
 export default function Footer() {
   return (
     <FooterWrapper>
@@ -47,7 +46,9 @@ export const FooterWrapper = styled.footer`
       color: '#F2AF29',
     })};
     padding: 0.2rem 0.5rem;
+    margin-bottom: 1rem;
   }
+
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

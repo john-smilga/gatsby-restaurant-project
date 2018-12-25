@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-import { styles } from '../../utils'
+import { styles, Section } from '../../utils'
 import Img from 'gatsby-image'
 export default function Gallery() {
   return (
@@ -36,20 +36,22 @@ export default function Gallery() {
         const img2 = data.img2.childImageSharp.fluid
         const img3 = data.img3.childImageSharp.fluid
         return (
-          <GalleryWrapper>
-            <div className="item item-1">
-              <Img fluid={img1} />
-              <p className="info">awesome pizza</p>
-            </div>
-            <div className="item item-2">
-              <Img fluid={img2} />
-              <p className="info">awesome pork</p>
-            </div>
-            <div className="item item-3">
-              <Img fluid={img3} />
-              <p className="info">awesome steak</p>
-            </div>
-          </GalleryWrapper>
+          <Section>
+            <GalleryWrapper>
+              <div className="item item-1">
+                <Img fluid={img1} />
+                <p className="info">awesome pizza</p>
+              </div>
+              <div className="item item-2">
+                <Img fluid={img2} />
+                <p className="info">awesome pork</p>
+              </div>
+              <div className="item item-3">
+                <Img fluid={img3} />
+                <p className="info">awesome steak</p>
+              </div>
+            </GalleryWrapper>
+          </Section>
         )
       }}
     />
@@ -57,8 +59,6 @@ export default function Gallery() {
 }
 
 const GalleryWrapper = styled.div`
-  width: 90vw;
-  margin: 2rem auto;
   display: grid;
   grid-template-columns: auto;
   grid-row-gap: 1rem;

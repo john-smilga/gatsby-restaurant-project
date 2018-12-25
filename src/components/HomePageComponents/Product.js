@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import { styles } from '../../utils'
 import Img from 'gatsby-image'
 export default function Product({ product }) {
-  const { name, price, description } = product
-  const { fluid } = product.img
+  const { name, price, ingredients } = product
+  const { fixed } = product.img
 
   return (
     <ProductWrapper>
-      <Img fluid={fluid} className="img" />
+      <Img fixed={fixed} className="img" />
       <div className="text">
         <h3 className="name">{name}</h3>
         <h3 className="price">${price}</h3>
-        <p className="info">{description}</p>
+        <p className="info">{ingredients}</p>
       </div>
     </ProductWrapper>
   )
@@ -20,6 +20,9 @@ export default function Product({ product }) {
 
 export const ProductWrapper = styled.div`
   margin: 2rem 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1rem;
   .img {
     border-radius: 0.5rem;
   }
@@ -32,13 +35,12 @@ export const ProductWrapper = styled.div`
     margin-top: 0.5rem;
   }
   .info {
-    line-height: 1.7em;
     margin-top: 0.5rem;
     word-spacing: 0.2rem;
   }
-  @media (min-width: 800px) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-column-gap: 2rem;
-  }
+  // @media (min-width: 650px) {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr;
+  //   grid-column-gap: 1rem;
+  // }
 `

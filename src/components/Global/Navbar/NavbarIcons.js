@@ -37,7 +37,7 @@ export default class NavbarIcons extends Component {
 
 const IconWrapper = styled.div`
   .icon {
-    margin-right: 2rem;
+    // margin-right: 2rem;
     font-size: 1.3rem;
     cursor: pointer;
     ${styles.transFunction()};
@@ -57,6 +57,8 @@ const IconWrapper = styled.div`
   }
   display: none;
   @media (min-width: 768px) {
-    display: block;
+    width: 10rem;
+    display: flex;
+    justify-content: space-around;
   }
 `
