@@ -21,10 +21,7 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 body {
-  // font-family: 'Caveat', cursive;
-  // color:red;
-  // font-size:3rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#262626;
   background:#fff;
 }
