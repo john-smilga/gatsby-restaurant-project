@@ -6,7 +6,31 @@ import Img from 'gatsby-image'
 export default function Gallery() {
   return (
     <StaticQuery
-      query={query}
+      query={graphql`
+        {
+          img1: file(relativePath: { eq: "homeGallery/img-1.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+          img2: file(relativePath: { eq: "homeGallery/img-2.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+          img3: file(relativePath: { eq: "homeGallery/img-3.jpeg" }) {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      `}
       render={data => {
         const img1 = data.img1.childImageSharp.fluid
         const img2 = data.img2.childImageSharp.fluid
@@ -71,32 +95,6 @@ const GalleryWrapper = styled.div`
     }
     .item-3 {
       grid-area: three;
-    }
-  }
-`
-
-export const query = graphql`
-  {
-    img1: file(relativePath: { eq: "homeGallery/img-1.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img2: file(relativePath: { eq: "homeGallery/img-2.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img3: file(relativePath: { eq: "homeGallery/img-3.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
     }
   }
 `
