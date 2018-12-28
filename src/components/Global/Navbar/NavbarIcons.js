@@ -26,7 +26,12 @@ export default class NavbarIcons extends Component {
     return (
       <IconWrapper>
         {this.state.icons.map(item => (
-          <a href={item.path} key={item.id} target="_blank">
+          <a
+            href={item.path}
+            key={item.id}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {item.icon}
           </a>
         ))}

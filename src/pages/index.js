@@ -8,7 +8,6 @@ import img from '../images/bcg/homeBcg.jpeg'
 import QuickInfo from '../components/HomePageComponents/QuickInfo'
 import Gallery from '../components/HomePageComponents/Gallery'
 import Menu from '../components/HomePageComponents/Menu'
-import Footer from '../components/Global/Footer'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -22,7 +21,6 @@ const IndexPage = () => (
     <QuickInfo />
     <Gallery />
     <Menu />
-    <Footer />
   </Layout>
 )
 
